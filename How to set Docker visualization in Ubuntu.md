@@ -44,5 +44,10 @@ It works.
 I tried to install `sublime-text` and `vscode` to the container. Both work. In the processing, I found something about the graphic configuration installed which may be the dependencies I missed. 
 I recreated a container from `ubuntu/cuda:torch1` with dockerfile in which I installed `abiword` automatically.  However, the whole process got stuck in the configuration of `geographical` and `time zone`. I had to delete the container recreate another one and install `abiword` manually with the configuration of `geographical` and `time zone`. Right now, it works as I expected. 
 
+To start a existing container, the docker command is as follows: 
+```
+docker exec -it <container ID> bash
+```
+
 
 
