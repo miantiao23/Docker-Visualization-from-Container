@@ -6,6 +6,6 @@ the commands for a long while until today.
 Here is the old docker command I left before： 
 
 ```
-        docker run -it --gpus all -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY ubuntu/cuda:torch1
+docker run -it --gpus all -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY ubuntu/cuda:torch1
 ```
 
