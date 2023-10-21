@@ -38,6 +38,11 @@ Use the same `x11` configuration for the GUI.
 ```
 docker run -it -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY abiword
 ```
+It works. 
+![Screenshot from 2023-10-21 11-41-23](https://github.com/miantiao23/Docker-Visualization-from-container/assets/15344076/5b16ce76-9345-41ac-8d34-307734c7b77b)
+
+I tried to install `sublime-text` and `vscode` to the container. Both work. In the processing, I found something about the graphic configuration installed which may be the dependencies I missed. 
+I recreated a container from `ubuntu/cuda:torch1` with dockerfile in which I installed `abiword` automatically.  However, the whole process got stuck in the configuration of `geographical` and `time zone`. I had to delete the container recreate another one and install `abiword` manually with the configuration of `geographical` and `time zone`. Right now, it works as I expected. 
 
 
 
