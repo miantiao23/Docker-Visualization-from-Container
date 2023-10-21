@@ -8,4 +8,10 @@ Here is the old docker command I left before：
 ```
 docker run -it --gpus all -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY ubuntu/cuda:torch1
 ```
+I was doubted about the configuration of the computer, and then I tried another container with the command: 
+```
+docker run -t -i --privileged -v /dev/bus/usb:/dev/bus/usb -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY -e HOME=/home/bladerf -u bladerf ncsuarc/bladerf bash -l
+```
+
+I thought it would not work. However, it works. 
 
