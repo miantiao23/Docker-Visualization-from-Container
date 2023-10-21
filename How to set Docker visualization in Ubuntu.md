@@ -13,5 +13,5 @@ I was doubted about the configuration of the computer, and then I tried another 
 docker run -t -i --privileged -v /dev/bus/usb:/dev/bus/usb -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY -e HOME=/home/bladerf -u bladerf ncsuarc/bladerf bash -l
 ```
 
-I thought it would not work. However, it works. 
+I thought it would not work. However, it works. With this fact, I begin to think the dependencies in the docker image are lost. I tried to install the `xvfb`, but it took me a long time to install it. I thought it would appear in the same situation that the system needs you to configure the `GUI` interface. 
 
