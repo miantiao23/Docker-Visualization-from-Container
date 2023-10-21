@@ -32,6 +32,12 @@ CMD abiword
 ```
 And then, I use the `build` command to build the image. 
 ```
-docker build -t 
+docker build -t abiword .
+```
+Use the same `x11` configuration for the GUI. 
+```
+docker run -it -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY abiword
+```
+
 
 
