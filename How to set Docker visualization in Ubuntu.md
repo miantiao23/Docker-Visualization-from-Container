@@ -13,8 +13,8 @@ I doubted the configuration of the computer, and then I tried another container 
 docker run -t -i --privileged -v /dev/bus/usb:/dev/bus/usb -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY -e HOME=/home/bladerf -u bladerf ncsuarc/bladerf bash -l
 ```
 
-I thought it would not work. However, it works. 
-
+I used the command `gnuradio-companion` to start the app. I thought it would not work. However, it works. 
+![Screenshot from 2023-10-21 11-25-35](https://github.com/miantiao23/Docker-Visualization-from-container/assets/15344076/2e929fa1-c810-4335-94bc-ee850fd2e131)
 
 
 With this fact, I begin to think the dependencies in the docker image are lost. I tried to install the `xvfb`, but it took me a long time to install it. I thought it would appear in the same situation that the system needs you to configure the `GUI` interface. I also thought maybe the `X11` server had some issues. I reinstalled the containers `x11` server. I spent two days fixing all the missing dependencies I thought. All attempts failed. I did not see anything. 
