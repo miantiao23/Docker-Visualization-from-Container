@@ -17,5 +17,21 @@ I used the command `gnuradio-companion` to start the app. I thought it would not
 ![Screenshot from 2023-10-21 11-25-35](https://github.com/miantiao23/Docker-Visualization-from-container/assets/15344076/2e929fa1-c810-4335-94bc-ee850fd2e131)
 
 
-With this fact, I begin to think the dependencies in the docker image are lost. I tried to install the `xvfb`, but it took me a long time to install it. I thought it would appear in the same situation that the system needs you to configure the `GUI` interface. I also thought maybe the `X11` server had some issues. I reinstalled the containers `x11` server. I spent two days fixing all the missing dependencies I thought. All attempts failed. I did not see anything. 
+With this fact, I begin to think the dependencies in the docker image are lost. I tried to install the `xvfb`, but it took me a long time to install it. I thought it would appear in the same situation that the system needs you to configure the GUI interface. I also thought maybe the `X11` server had some issues. I reinstalled the containers `x11` server. I spent two days fixing all the missing dependencies I thought. All attempts failed. I did not see anything.
+
+I tried to forget everything I knew before and restart to study to how use it and make it happen again. So I started a Youtube video to start it. The link is as follows: 
+```
+https://www.youtube.com/watch?v=L4nqky8qGm8
+```
+The author just pulled the latest version of `ubuntu` from `docker hub` and installed a gui-based edit app, `abiword`, to enable the interactive face. I followed his commands to creat a docker file in a specific directory. 
+```
+FROM ubuntu
+RUN apt-get update && \
+    apt-get install -y abiword
+CMD abiword
+```
+And then, I use the `build` command to build the image. 
+```
+docker build -t 
+
 
