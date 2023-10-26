@@ -53,8 +53,7 @@ Update on 10/26/2023：
 Just found the issues in some platforms. After you restart your host, the GUI will lose the connections to the 'DISPLAY', like the attached screenshot: 
 ![Screenshot from 2023-10-26 08-05-30](https://github.com/miantiao23/Docker-Visualization-from-container/assets/15344076/58e48740-b8cc-4825-bccd-51e809593c5d)
 
-It took me almost two days to figure out what was wrong with the connection. I just accidentally retyped the command,
-the connection is back: 
+It took me almost two days to figure out what was wrong with the connection. I just accidentally retyped the command, and the connection is back: 
 ```
 xhost +
 ```
