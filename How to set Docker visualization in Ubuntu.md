@@ -39,6 +39,7 @@ Use the same `x11` configuration for the GUI.
 docker run -it -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY abiword
 ```
 It works. 
+
 ![Screenshot from 2023-10-21 11-41-23](https://github.com/miantiao23/Docker-Visualization-from-container/assets/15344076/5b16ce76-9345-41ac-8d34-307734c7b77b)
 
 I tried to install `sublime-text` and `vscode` to the container. Both work. In the processing, I found something about the graphic configuration installed which may be the dependencies I missed. 
@@ -51,6 +52,7 @@ docker exec -it <container ID> bash
 Update on 10/26/2023：
 
 Just found the issues in some platforms. After you restart your host, the GUI will lose the connections to the 'DISPLAY', like the attached screenshot: 
+
 ![Screenshot from 2023-10-26 08-05-30](https://github.com/miantiao23/Docker-Visualization-from-container/assets/15344076/58e48740-b8cc-4825-bccd-51e809593c5d)
 
 It took me almost two days to figure out what was wrong with the connection. I just accidentally retyped the command, and the connection is back: 
